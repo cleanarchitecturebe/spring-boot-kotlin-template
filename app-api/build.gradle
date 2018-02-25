@@ -1,0 +1,10 @@
+/*
+ * Application API
+ * ===============
+ * Should contain as little dependencies as possible.
+ * No technical frameworks allowed here!
+ */
+
+dependencies {
+
+}

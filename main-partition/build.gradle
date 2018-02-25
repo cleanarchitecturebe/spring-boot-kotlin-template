@@ -1,0 +1,29 @@
+/*
+ * Main partition
+ * ==============
+ * Linking everything together into an executable application
+ */
+
+buildscript {
+    repositories {
+        maven { url 'https://repo.spring.io/libs-milestone' }
+    }
+
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.0.0.RC2'
+        classpath "org.jetbrains.kotlin:kotlin-allopen:1.2.21"
+    }
+}
+
+apply plugin: "org.springframework.boot"
+apply plugin: "kotlin-spring"
+
+dependencies {
+    compile project(":domain")
+    compile project(":app-api")
+    compile project(":app-impl")
+    compile project(":infra-web")
+    compile project(":infra-persistence")
+
+    compile "org.springframework.boot:spring-boot-starter-web:2.0.0.RC2"
+}

@@ -1,0 +1,26 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.2.21"
+}
+
+subprojects {
+    apply plugin: "org.jetbrains.kotlin.jvm"
+
+    repositories {
+        jcenter()
+        maven {
+            url "https://repo.spring.io/milestone/"
+        }
+    }
+
+
+
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
+    }
+
+    dependencies {
+        compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    }
+}

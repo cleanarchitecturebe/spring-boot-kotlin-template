@@ -1,0 +1,16 @@
+/*
+ * Web infrastructure
+ * ==================
+ * Technical framework dependencies allowed here (Spring)
+ * Dependencies should be about exposing your system
+ * to the outside world (no persistence frameworks!)
+ */
+
+plugins {
+    id "org.jetbrains.kotlin.plugin.spring" version "1.2.21"
+}
+
+dependencies {
+    compile project(":app-api")
+    compile "org.springframework:spring-webmvc:5.0.4.RELEASE"
+}
